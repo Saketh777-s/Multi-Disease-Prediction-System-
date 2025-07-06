@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>AI-Based Multi-Disease Prediction</h2>
+        <form id="predictionForm">
+            <label>Age:</label>
+            <input type="number" id="age" required>
+
+            <label>Gender:</label>
+            <select id="gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+
+            <label>Height (cm):</label>
+            <input type="number" id="height" required>
+
+            <label>Weight (kg):</label>
+            <input type="number" id="weight" required>
+
+            <label>BMI:</label>
+            <input type="number" id="bmi" required>
+
+            <label>Smoking Habit:</label>
+            <select id="smoking">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Alcohol Consumption:</label>
+            <select id="alcohol">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Exercise Frequency:</label>
+            <select id="exercise">
+                <option value="0">None</option>
+                <option value="1">Occasionally</option>
+                <option value="2">Regularly</option>
+            </select>
+
+            <label>Cholesterol Level:</label>
+            <input type="number" id="cholesterol" required>
+
+            <label>Blood Pressure:</label>
+            <input type="number" id="blood_pressure" required>
+
+            <label>Blood Sugar Level:</label>
+            <input type="number" id="blood_sugar" required>
+
+            <button type="button" onclick="predictDisease()">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
